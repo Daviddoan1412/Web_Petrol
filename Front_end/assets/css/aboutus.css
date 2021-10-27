@@ -36,6 +36,9 @@ li {
 .d-flex {
     display: flex;
 }
+.padding_0{
+    padding: 0;
+}
 
 .justify_content_space_between {
     justify-content: space-between;
@@ -382,392 +385,254 @@ body {
         display: none;
     }
 }
-
-/* ================== 4,Banner Section ================== */
-
-.banner {
-    height: 85vh;
+/* Start banner section */
+.banner{
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
 }
-
-.banner_background_1 {
-    background-image: url(../images/banner_1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+.banner .container-fluid{
+    padding: 0 0;
+}
+.banner .banner_zoom{
+    height:100%;
+    background-image: url("https://portals.petrolimex.com.vn/_themes/sunrise/img/about-page-title.jpg");
+    background-position: center center;
     background-size: cover;
+    transition: 2s;
 }
 
-.banner_background_2 {
-    background-image: url(../images/banner_2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.banner .banner_zoom:hover {
+    transform: scale(1.3,1.3);
+    transition:  all 2s;
+    background-size: 110% 110%;
 }
-
-.banner .banner__content-note {
-    font-size: 17px;
-    font-weight: 400;
+.banner .banner_zoom .banner_title{
     text-transform: uppercase;
-    color: rgb(219, 223, 32);
-    font-style: italic;
-    margin-bottom: 10px;
-    line-height: 1;
-    display: block;
-    animation-delay: 1s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
-}
-
-.banner .banner__content-title {
-    font-size: 45px;
-    font-weight: 600;
     color: white;
-    margin-bottom: 30px;
-    line-height: 1;
-    animation-delay: 1.2s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
+    font-size: 60px;
+    height: 70vh;
+    font-weight: bold;
 }
 
-.banner .banner__content-describe {
-    font-size: 19px;
-    margin-bottom: 30px;
-    font-weight: 400;
-    color: rgb(219, 223, 32);
-    animation-delay: 1.5s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
-}
-
-.banner .banner__content-button .button {
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    display: inline-block;
-    background-color: #0970f7;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 30px;
-    font-size: 14px;
-    animation-delay: 1.6s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
+@keyframes customZoomBg {
+    0%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 @media(max-width:576px) {
-    .banner {
-        height: 80vh;
-    }
-    .banner .banner__content-title {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-    .banner .banner__content-describe {
-        font-size: 16px;
+    .banner .banner_zoom .banner_title {
+        font-size: 15px;
     }
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100px, 0);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-/* ================== 5,Static_area Section ================== */
 
-.static_area {
-    margin: 6rem 0;
+/* start specific details part */
+.specific_details{
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
-
-.static_area .static {
-    border: 1px solid#ebebeb;
-    border-radius: 5px;
-    padding: 0 20px;
+.specific_details .details_title{
+    font-family: "SF Pro Display",sans-serif;
+    font-weight: bold;
+    color: black;
+    line-height: 1.3;
+    font-size: 30px;
 }
+.specific_details .details_info{
+    font-family: "SF Pro Display",sans-serif;
+    font-weight: normal;
+    color: #666666;
+    font-size: 20px;
+    border-bottom: 1px;
+    border-color: black;
 
-.static_area .static__content .static_image {
-    margin-right: 8px;
+
 }
-
-.static_area .static__content {
-    height: 111px;
+strong{
+    color: black;
+    font-size: 20px;
 }
-
-.static_area .static__content h2 {
-    color: #253237;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: capitalize;
-    line-height: 22px;
-    margin-bottom: 0;
+p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.6;
+    font-size: 18px;
 }
-
-.static_area .static__content p {
-    line-height: 20px;
-    color: #666;
-    font-size: 13px;
-    margin: 0;
-}
-
-@media(max-width: 768px) {
-    .static_area .static__content {
-        margin-bottom: 15px;
-    }
-}
-/* ================== 6, Seller Section ================== */
-
-.seller .sellerTop-title {
-    font-family: "Open Sans", sans-serif;
-    font-size: 24px;
-    color: #253237;
-    text-transform: capitalize;
-    line-height: 16px;
-    font-weight: 600;
-    margin: 0 0 15px;
-}
-
-.seller .sellerTop-describe {
-    color: #888;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    position: relative;
-    margin-top: 10px;
-}
-
-.seller .seller_slider {
-    margin: 5rem 2rem;
-}
-
-.seller .seller_slider .seller__content {
-    position: relative;
-    background: #fff;
-    z-index: 1;
-    border: 1px solid #ebebeb;
-    border-radius: 5px;
-    overflow: hidden;
+hr{
+    margin-top: 5px;
     margin-bottom: 30px;
-    transition: .5s;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+@media(max-width:576px) {
+    .specific_details{
+        padding-top: 33px !important;
+        padding-bottom: 0px !important;
+    }
+    .specific_details .details_title h2{
+        font-size: 25px;
+    }
+    .specific_details .details_title p{
+        line-height: 1.4;
+        font-size: 15px;
+    }
 }
 
-.seller .seller_slider .seller__content:hover {
-    border-color: #0970f7;
-}
+/* end specific details part */
 
-.seller .seller__content-info {
-    padding: 20px 15px 16px 15px;
-    background: #fff;
-    overflow: hidden;
-    position: relative;
+/* members part */
+.member{
+    padding: 5rem 0;
 }
-
-.seller .seller__content-info .describe {
-    font-size: 12px;
+.member .title{
     text-transform: uppercase;
-    color: #999;
-    line-height: 1;
-    margin-bottom: 10px;
-    display: block;
+    font-style: bold;
+    font-family: "SF Pro Display",sans-serif;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.member .title span{
+    padding: 5px;
+    color: orange;
+}
+.member .box {
+    margin: 1rem 0;
+    box-shadow: 0px 0px 12px #dad9f1;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.member .box .line-top {
+    width: 0;
+    height: 5px;
+    background-color: orangered;
+    margin-bottom: 2rem;
+    transition: 0.6s;
+}
+.member .box:hover .line-top {
+    width: 8rem;
+}
+.member .box .line-bottom {
+    width: 0rem;
+    height: 5px;
+    background-color: orangered;
+    margin-left: auto;
+    transition: 0.6s;
+}
+.member .box:hover .line-bottom {
+    width: 8rem;
 }
 
-.seller .seller__content-info .title {
-    line-height: 18px;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: #253237;
-    font-size: 14px;
-    text-transform: capitalize;
-    transition: .5s;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.seller .seller__content-info .title:hover {
-    color: #0970f7;
-}
-
-.seller .seller__content-info .star_rate {
-    margin-bottom: 6px;
-}
-
-.seller .seller__content-info .star_rate i {
-    font-size: 14px;
-    color: #fdd835;
-}
-
-.seller .seller__content-image {
+.member .box .img {
     position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.member .box .img img {
+    box-shadow: 0px 0px 15px #c1c0c0;
 }
 
-.seller .seller__content-image .button_new {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: inline-block;
-    color: #fff;
-    padding: 0 5px;
-    text-align: center;
-    line-height: 20px;
-    height: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 5px;
-    text-transform: capitalize;
-    text-align: center;
-    z-index: 1;
-    background-color: #0970f7;
-}
-
-.seller .seller__content-image .button_search {
+.member .box .img .overlay {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    text-align: center;
-    pointer-events: none;
-    z-index: 1;
-    height: 46px;
-}
-
-.seller .seller__content-image .button_search .button {
-    visibility: hidden;
+    left: 100%;
+    transform: translate(0, -50%);
+    width: fit-content;
+    color: black;
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
     opacity: 0;
-    display: inline-block;
-    background: #fff;
-    border: none;
-    line-height: 46px;
-    height: 46px;
-    width: 46px;
-    color: #253237;
-    padding: 0;
-    border-radius: 100%;
-    text-align: center;
-    text-transform: capitalize;
-    pointer-events: visible;
+    visibility: hidden;
 }
-
-.seller .seller__content:hover .seller__content-image .button_search .button {
-    transform: scale3d(1, 1, 1);
-    transition: .5s;
+.member .box:hover .img .overlay {
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 1;
     visibility: visible;
-    line-height: 46px;
-    height: 46px;
-    width: 46px;
 }
 
-.seller .seller__content:hover .seller__content-image .button_search .button:hover {
-    background-color: #0970f7;
-    color: #fff;
+.member .box .job {
+    font-size: 1.5rem;
+    padding: 1rem 0 0.7rem;
 }
 
-.seller .add_seller {
-    width: 100%;
-    padding: 0 15px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    transition: .5s;
+.member .box .name {
+    font-size: 2rem;
+    color: orangered;
 }
 
-.seller .seller__content:hover .add_seller {
-    top: 88%;
-    left: 0;
+.member .box .list-social {
+    margin: 1rem auto 3rem;
+    width: max-content;
+}
+.member .box .list-social .list-item .facebook {
+    background-color: rgb(4, 57, 235);
 }
 
-.seller .add_seller .add {
-    display: inline-block;
-    background: #fff;
-    color: #253237;
-    padding: 0;
-    text-transform: capitalize;
-    border: none;
-    border-width: 2px;
-    border-bottom-style: solid;
-    line-height: 24px;
-    height: 26px;
-    width: auto;
-    cursor: pointer;
-    font-size: 12px;
-    transition: .5s;
+.member .box .list-social .list-item .twitter {
+    background-color: rgb(18, 114, 240);
 }
 
-.seller .add_seller .add:hover {
-    color: #0970f7;
+.member .box .list-social .list-item .google {
+    background-color: rgb(252, 53, 17);
 }
 
-.seller .add_seller .icon a {
-    font-size: 14px;
-    color: #253237;
+.member .box .list-social .list-item .linkedin {
+    background-color: rgb(46, 66, 248);
 }
 
-.seller .add_seller .icon .left {
-    padding-right: 7px;
+.member .box .list-social .list-item {
+    transition: 0.5s;
 }
 
-.seller .add_seller .icon a:hover {
-    color: #0970f7;
+.member .box .list-social .list-item:hover {
+    transform: rotateY(360deg);
 }
 
+.member .box .list-social .list-item .list-link {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    margin: 1rem;
+    border-radius: 50%;
+}
 @media(max-width:576px) {
-    .seller .seller__content-info .title {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+    .member{
+        padding: 2rem 0;
     }
-}
-
-/* ================== Banner_area Section ================== */
-
-.banner_area {
-    margin-bottom: 5rem;
-}
-
-.banner_area .banner_content {
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.banner_area .banner_content img {
-    transition: .5s ease-in-out;
-}
-
-.banner_area .banner_content:hover img {
-    transform: scale(1.035);
-}
-
-@media(max-width:576px) {
-    .banner_area .banner_content {
-        margin-bottom: 20px;
+    .member .title {
+        font-size: 15px;
+        margin-bottom: 30px;
     }
-}
-/* ================== 11, brand Section ================== */
-
-.brand {
-    padding-bottom: 60px;
-    padding-top: 60px;
-}
-.brand .items{
-    padding: 0px 10px;
-}
-
-.brand_slider {
-    border: 1px solid#ebebeb;
-    border-radius: 5px;
-    padding: 2rem 0;
 }
 /* ================== 12, footer Section ================== */
 
@@ -925,6 +790,7 @@ body {
     background: #0970f7;
 }
 
+
 .footer .footer_right .android {
     margin-right: 15px;
 }
@@ -932,6 +798,7 @@ body {
 .footer .footer_right .store img {
     width: 15rem;
 }
+
 @media(max-width:576px) {
     .footer .footer_right .email {
         padding-left: 15px;
